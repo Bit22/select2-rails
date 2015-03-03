@@ -1,15 +1,1 @@
-/**
- * Select2 French translation
- */
-(function ($) {
-    "use strict";
-
-    $.extend($.fn.select2.defaults, {
-        formatNoMatches: function () { return "Aucun résultat trouvé"; },
-        formatInputTooShort: function (input, min) { var n = min - input.length; return "Merci de saisir " + n + " caractère" + (n == 1? "" : "s") + " de plus"; },
-        formatInputTooLong: function (input, max) { var n = input.length - max; return "Merci de supprimer " + n + " caractère" + (n == 1? "" : "s"); },
-        formatSelectionTooBig: function (limit) { return "Vous pouvez seulement sélectionner " + limit + " élément" + (limit == 1 ? "" : "s"); },
-        formatLoadMore: function (pageNumber) { return "Chargement de résultats supplémentaires..."; },
-        formatSearching: function () { return "Recherche en cours..."; }
-    });
-})(jQuery);
+(function(){if(window.define)var e=window.define;if(window.require)var t=window.require;if(window.jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd.define,t=jQuery.fn.select2.amd.require;e("select2/i18n/fr",[],function(){return{inputTooLong:function(e){var t=e.input.length-e.maximum,n="Supprimez "+t+" caractère";return t!==1&&(n+="s"),n},inputTooShort:function(e){var t=e.minimum-e.input.length,n="Saisissez "+t+" caractère";return t!==1&&(n+="s"),n},loadingMore:function(){return"Chargement de résultats supplémentaires…"},maximumSelection:function(e){var t="Vous pouvez seulement sélectionner "+e.maximum+" élément";return e.maximum!==1&&(t+="s"),t},noResults:function(){return"Aucun résultat trouvé"},searching:function(){return"Recherche en cours…"}}}),t("jquery.select2"),jQuery.fn.select2.amd={define:e,require:t}})();
